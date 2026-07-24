@@ -30,7 +30,7 @@ def generate_section(title, prompt_desc, topic, scraped_text):
     Use the following scraped data thoroughly with specific facts and details:
     {scraped_text[:15000]}
     """
-    content = call_nvidia_api(prompt, max_tokens=3000, temp=0.4)
+    content = call_nvidia_api(prompt, max_tokens=5000, temp=0.4)
     return title, content
 
 def generate_report(topic: str, scraped_text: str, language: str, stats: dict) -> tuple:
